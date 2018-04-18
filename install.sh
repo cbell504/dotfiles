@@ -10,6 +10,9 @@ common=(
 "lynx"
 "cmus"
 "zsh"
+"git"
+"python3"
+"gcc"
 )
 
 # Array of packages for debian based linux
