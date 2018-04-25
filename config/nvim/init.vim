@@ -52,3 +52,39 @@ vnoremap > >gv " better indentation
 
 " Plugins
 " Python mode
+" Install link to plugin manager
+"  curl -fLo ~/.local/share/nvim/sites/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+cal plug#begin('~/.local/share/nvim/plugged')
+" Make sure to use single quotes
+" Examples
+" Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
+" Plug 'junegunn/vim-easy-align
+"
+" Any valid git URL is allowed
+" Plug 'https://github.com/junegunn.vim-github-dashboard.git'
+"
+" Multiple Plug commands can be written in a single line using | separators
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+"
+" On-Demand loading
+" Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToogle' }
+" Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
+"
+" Using a non-master branch 
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
+"
+" Initaialize plugin system
+
+Plug 'python-mode/python-mode', { 'branch': 'develop' }
+" Plug 'nvim/vim-flake8'
+" Plug 'vim-syntastic/syntastic'
+
+call plug#end()
+
+" Python-mode configs
+let g:pymode_python = 'python3'
+hi pythonSelf ctermfg=68 guifg=#5f87d7 cterm=bold gui=bold
+
+" Vim Syntastic Configs
+let python_highlight_all=1
