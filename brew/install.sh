@@ -8,6 +8,7 @@ brew update
 brew upgrade --all
 
 apps=(
+    coconutbattery
 	cowsay
 	curl
 	findutils
