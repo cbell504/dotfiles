@@ -31,7 +31,7 @@ syntax on
 
 " Better Copy and Pase
 set pastetoggle=<F2>
-set clipboard=unnamed   
+set clipboard=unnamed
 
 " Enable Mouse
 set mouse=a
@@ -77,14 +77,14 @@ cal plug#begin('~/.local/share/nvim/plugged')
 " Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToogle' }
 " Plug 'tpope/vim-fireplace', { 'for': 'clojure' }
 "
-" Using a non-master branch 
+" Using a non-master branch
 " Plug 'rdnetto/YCM-Generator', { 'branch': 'stable' }
 "
 " Initaialize plugin system
 
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'autue-shaik/vim-javacomplete2'
-Plug 'vim-arline/vim-arline'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'vim-airline/vim-airline'
 Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 " Plug 'nvim/vim-flake8'
 " Plug 'vim-syntastic/syntastic'
