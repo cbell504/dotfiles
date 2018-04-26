@@ -45,6 +45,12 @@ inoremap <C-Z> <C-O> :update<CR>
 vnoremap < <gv " better indentation
 vnoremap > >gv " better indentation
 
+" Auto Commands
+" General
+" Removw all trailing whitespace upon write
+autocmd BufWritePre * %s/\s\+$//e
+
+
 " Show whitepace
 " Must be inserted before colorscheme command
 "autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
@@ -77,14 +83,39 @@ cal plug#begin('~/.local/share/nvim/plugged')
 " Initaialize plugin system
 
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
+Plug 'autue-shaik/vim-javacomplete2'
+Plug 'vim-arline/vim-arline'
+Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
 " Plug 'nvim/vim-flake8'
 " Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
 " Python-mode configs
+" Install neovim via pip3
 let g:pymode_python = 'python3'
 hi pythonSelf ctermfg=68 guifg=#5f87d7 cterm=bold gui=bold
+
+" JavaComplete2
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" To enable smart inseeeeeting class imports with F4
+nmap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+imap <F4> <Plug>(JavaComplete-Imports-AddSmart)
+
+" To enable usual inserting class imports with F5
+nmap <F5> <Plug>(JavaComplete-Imports-Add)
+imap <F5> <Plug>(JavaComplete-Imports-Add)
+
+" To add all missing imports with F6
+nmap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F6> <Plug>(JavaComplete-Imports-AddMissing)
+
+" To remove all unused imports with F7
+nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Vim Syntastic Configs
 let python_highlight_all=1
