@@ -83,17 +83,24 @@ cal plug#begin('~/.local/share/nvim/plugged')
 " Initaialize plugin system
 
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'artur-shaik/vim-javacomplete2'
+" Plug 'artur-shaik/vim-javacomplete2'
 Plug 'vim-airline/vim-airline'
-Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+Plug 'scrooloose/nerdtree'
+if has('nvim')
+    Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
+    Plug 'zchee/deoplete-jedi'
+endif
 " Plug 'nvim/vim-flake8'
 " Plug 'vim-syntastic/syntastic'
+
+let g:deoplete#enable_at_startup = 1
 
 call plug#end()
 
 " Python-mode configs
 " Install neovim via pip3
 let g:pymode_python = 'python3'
+
 hi pythonSelf ctermfg=68 guifg=#5f87d7 cterm=bold gui=bold
 
 " JavaComplete2
@@ -115,7 +122,15 @@ nmap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 " Deoplete
-let g:deoplete#enable_at_startup = 1
+
+" NERDTree
+autocmd vimenter * NERDTree
+let NERDTreeShowHidden=1
+map <C-n> :NERDTreeToggle<CR>
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 
 " Vim Syntastic Configs
-let python_highlight_all=1
+" let python_highlight_all=1
