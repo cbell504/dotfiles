@@ -8,18 +8,19 @@ brew update
 brew upgrade --all
 
 apps=(
+	appcleaner
     coconutbattery
 	cowsay
 	curl
 	findutils
 	gdb
+	gfxcardstatus
 	git
 	go
 	grep
 	htop
 	iterms
 	neofetch
-	macs-fan-control
 	maven
 	mpv
 	node
@@ -27,6 +28,7 @@ apps=(
 	ponysay
 	python
 	python3
+	smcfancontrol
 	tree
 	vlc
 	wget
