@@ -34,6 +34,7 @@ readonly PACKAGES=(
 "perl"
 "ponysay"
 "python3"
+"ripgrep"
 "tree"
 "tmux"
 "youtube-dl"
