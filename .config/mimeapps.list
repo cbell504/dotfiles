@@ -1,0 +1,4 @@
+[Default Applications]
+x-scheme-handler/magnet=transmission-remote.desktop;
+image/png=feh.desktop;
+image/jpeg=feh.desktop;
