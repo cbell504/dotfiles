@@ -82,9 +82,13 @@ cal plug#begin('~/.local/share/nvim/plugged')
 "
 " Initaialize plugin system
 
+Plug 'gabrielelana/vim-markdown'
+
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
+
 " Plug 'artur-shaik/vim-javacomplete2'
 Plug 'vim-airline/vim-airline'
+
 Plug 'scrooloose/nerdtree'
 if has('nvim')
     Plug 'Shougo/deoplete.nvim', { 'do': 'UpdateRemotePlugins' }
