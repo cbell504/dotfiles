@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -7,9 +9,6 @@ export ZSH=~/.oh-my-zsh
 # Personal exports
 export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
 
-
-
-shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
 HISTSIZE= HISTFILESIZE= # Infinite history.
 
 # Setting Bash prompt. Capitalizes username and host if root user (my root user uses this same config file).
