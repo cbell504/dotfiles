@@ -8,3 +8,10 @@
 	clean = git-lfs clean -- %f
 [credential]
 	helper = store
+[color]
+    status = auto
+    branch = auto
+    interactive = auto
+    diff = auto
+[github]
+    user = Azurras
