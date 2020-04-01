@@ -72,7 +72,7 @@ readonly GIT=(
 )
 
 # Project folder to save all repos
-readonly PROJECT_FOLDER="~yui/Documents/projects"
+readonly PROJECT_FOLDER="~yui/Development/"
 
 # Name of current OS
 readonly SYSTEM_NAME=`uname`
