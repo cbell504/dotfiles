@@ -46,7 +46,7 @@ readonly PACKAGES=(
 readonly PACKAGES_BREW=(
 "appcleaner"
 "coconutbattery"
-"gfxcardstatus"
+#"gfxcardstatus"
 "gifcapture"
 "gimp"
 "google-backup-and-sync"
