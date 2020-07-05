@@ -118,7 +118,6 @@ if ! shopt -oq posix; then
 fi
 
 
-
 # Custom
 shopt -s autocd #Allows you to cd into directory merely by typing the directory name.
 HISTSIZE= HISTFILESIZE= # Infinite history.
@@ -129,17 +128,4 @@ if [ "$EUID" -ne 0 ]
 	else export PS1="\[$(tput bold)\]\[$(tput setaf 1)\][\[$(tput setaf 3)\]ROOT\[$(tput setaf 2)\]@\[$(tput setaf 4)\]$(hostname | awk '{print toupper($0)}') \[$(tput setaf 5)\]\W\[$(tput setaf 1)\]]\[$(tput setaf 7)\]\\$ \[$(tput sgr0)\]"
 fi
 
-# System
-alias sdn="sudo shutdown now"
-
-# Programs
-alias nv="nvim"
-alias snv="sudo nvim"
-alias r="ranger"
-alias sr="sudo ranger"
-alias gitlog="git log --oneline --graph"
-
-# Auto Color
-alias ls="ls -hN --color=auto --group-directories-first"
-alias grep="grep --color=auto"
-alias diff="diff --color=auto"
+source ~/.zsh_aliases
