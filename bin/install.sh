@@ -12,7 +12,6 @@ readonly INSTALL_PROMPT_LINUX="Installing the following APT Packages...\n"
 # Brew packages to pick up
 readonly PACKAGES=(
 "cowsay"
-"cmus"
 "curl"
 "findutils"
 "gcc"
@@ -25,7 +24,6 @@ readonly PACKAGES=(
 "lynx"
 "maven"
 "mongodb"
-"mplayer"
 "mpv"
 "mutt"
 "neofetch"
@@ -54,12 +52,9 @@ readonly PACKAGES_BREW=(
 "java"
 "mgba"
 "omnidisksweeper"
-"private-internet-access"
-"qutebrowser"
-"smcfancontrol"
-"spotify"
-"vimr"
-"vnc-viewer"
+#"private-internet-access"
+#"smcfancontrol"
+#"vnc-viewer"
 )
 
 # Array of packages for debian based linux
@@ -68,11 +63,10 @@ readonly PACKAGES_APT=()
 # Array of git repos I wanted local
 readonly GIT=(
 "https://github.com/robbyrussell/oh-my-zsh.git"
-"https://github.com/ubuntuphp/cute-browser.git"
 )
 
 # Project folder to save all repos
-readonly PROJECT_FOLDER="~yui/Development/"
+readonly PROJECT_FOLDER="~/Development/"
 
 # Name of current OS
 readonly SYSTEM_NAME=`uname`
