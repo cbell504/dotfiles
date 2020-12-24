@@ -9,7 +9,7 @@ readonly INSTALL_PROMPT="Installing the following packages...\n"
 readonly INSTALL_PROMPT_MACOS="Installing the following HomeBrew Packages...\n"
 readonly INSTALL_PROMPT_LINUX="Installing the following APT Packages...\n"
 
-# Brew packages to pick up
+# Brew and Debian packages to pick up
 readonly PACKAGES=(
 "cowsay"
 "curl"
@@ -18,17 +18,18 @@ readonly PACKAGES=(
 "gdb"
 "gearboy"
 "git"
-"go"
+# "go"
 "htop"
 "lua"
 "lynx"
 "maven"
-"mongodb"
+# "mongodb"
 "mpv"
 "mutt"
 "neofetch"
 "neovim"
 "node"
+"openjdk-11-jdk"
 "perl"
 "ponysay"
 "python3"
@@ -62,7 +63,7 @@ readonly PACKAGES_APT=()
 
 # Array of git repos I wanted local
 readonly GIT=(
-"https://github.com/robbyrussell/oh-my-zsh.git"
+    "https://github.com/robbyrussell/oh-my-zsh.git"
 )
 
 # Project folder to save all repos
