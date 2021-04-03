@@ -9,28 +9,27 @@ readonly INSTALL_PROMPT="Installing the following packages...\n"
 readonly INSTALL_PROMPT_MACOS="Installing the following HomeBrew Packages...\n"
 readonly INSTALL_PROMPT_LINUX="Installing the following APT Packages...\n"
 
-# Brew packages to pick up
+# Brew and Debian packages to pick up
 readonly PACKAGES=(
 "cowsay"
-"cmus"
 "curl"
 "findutils"
 "gcc"
 "gdb"
 "gearboy"
 "git"
-"go"
+# "go"
 "htop"
 "lua"
 "lynx"
 "maven"
-"mongodb"
-"mplayer"
+# "mongodb"
 "mpv"
 "mutt"
 "neofetch"
 "neovim"
 "node"
+"openjdk-11-jdk"
 "perl"
 "ponysay"
 "python3"
@@ -46,7 +45,7 @@ readonly PACKAGES=(
 readonly PACKAGES_BREW=(
 "appcleaner"
 "coconutbattery"
-"gfxcardstatus"
+#"gfxcardstatus"
 "gifcapture"
 "gimp"
 "google-backup-and-sync"
@@ -54,12 +53,9 @@ readonly PACKAGES_BREW=(
 "java"
 "mgba"
 "omnidisksweeper"
-"private-internet-access"
-"qutebrowser"
-"smcfancontrol"
-"spotify"
-"vimr"
-"vnc-viewer"
+#"private-internet-access"
+#"smcfancontrol"
+#"vnc-viewer"
 )
 
 # Array of packages for debian based linux
@@ -67,12 +63,11 @@ readonly PACKAGES_APT=()
 
 # Array of git repos I wanted local
 readonly GIT=(
-"https://github.com/robbyrussell/oh-my-zsh.git"
-"https://github.com/ubuntuphp/cute-browser.git"
+    "https://github.com/robbyrussell/oh-my-zsh.git"
 )
 
 # Project folder to save all repos
-readonly PROJECT_FOLDER="~yui/Documents/projects"
+readonly PROJECT_FOLDER="~/Development/"
 
 # Name of current OS
 readonly SYSTEM_NAME=`uname`
