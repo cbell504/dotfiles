@@ -81,7 +81,7 @@ plugins=(
   git
   mvn
   npm
-  osx
+  macos
   pip
   pylint
   python
