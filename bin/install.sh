@@ -7,7 +7,6 @@ readonly PACKAGES_INSTALL="Installing common packages...\n"
 readonly PACKAGES_INSTALL_CASK="Installing MacOS Brew Cask Packages...\n"
 readonly INSTALL_PROMPT="Installing the following packages...\n"
 readonly INSTALL_PROMPT_MACOS="Installing the following HomeBrew Packages...\n"
-readonly INSTALL_PROMPT_LINUX="Installing the following APT Packages...\n"
 
 # Brew packages to pick up
 readonly PACKAGES=(
@@ -90,14 +89,6 @@ function list_packages() {
         echo $INSTALL_PROMPT_MACOS
 
         for item in ${PACKAGES_BREW[@]}
-        do
-            echo $item
-        done
-    fi
-    if [[ "$SYSTEM_NAME" == 'Linux' ]]; then
-        echo $INSTALL_PROMPT_LINUX
-
-        for item in ${PACKAGES_APT[@]}
         do
             echo $item
         done
