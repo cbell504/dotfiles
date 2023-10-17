@@ -2,64 +2,45 @@
 #
 # This is a quick start guide to setting up a machine
 
-readonly BREW_CONFIG_CLEAN="Updating and cleaning up Brew...\n"
+readonly BREW_CONFIG_CLEAN="Updating, Upgrading, and Cleaning up Brew...\n"
 readonly PACKAGES_INSTALL="Installing common packages...\n"
 readonly PACKAGES_INSTALL_CASK="Installing MacOS Brew Cask Packages...\n"
 readonly INSTALL_PROMPT="Installing the following packages...\n"
 readonly INSTALL_PROMPT_MACOS="Installing the following HomeBrew Packages...\n"
 readonly INSTALL_PROMPT_LINUX="Installing the following APT Packages...\n"
 
-# Brew and Debian packages to pick up
+# Brew packages to pick up
 readonly PACKAGES=(
+"appcleaner"
+"coconutbattery"
 "cowsay"
 "curl"
 "findutils"
 "gcc"
-"gdb"
-"gearboy"
+#"gdb"
+"gifcapture"
+#"gimp"
 "git"
-# "go"
 "htop"
 "lua"
-"lynx"
 "maven"
 # "mongodb"
+"mgba"
 "mpv"
-"mutt"
 "neofetch"
 "neovim"
 "node"
-"openjdk-11-jdk"
-"perl"
+"omnidisksweeper"
+#"openjdk-11-jdk"
 "ponysay"
 "python3"
 "ripgrep"
 "tree"
 "tmux"
+"vitetris"
 "youtube-dl"
-"zsh"
 "zsh-completions"
 )
-
-# Brew cask package to pick up
-readonly PACKAGES_BREW=(
-"appcleaner"
-"coconutbattery"
-#"gfxcardstatus"
-"gifcapture"
-"gimp"
-"google-backup-and-sync"
-"intellij-idea-ce"
-"java"
-"mgba"
-"omnidisksweeper"
-#"private-internet-access"
-#"smcfancontrol"
-#"vnc-viewer"
-)
-
-# Array of packages for debian based linux
-readonly PACKAGES_APT=()
 
 # Array of git repos I wanted local
 readonly GIT=(
@@ -77,7 +58,7 @@ readonly SYSTEM_NAME=`uname`
 function brew_configs() {
     echo $BREW_CONFIG_CLEAN
     brew update
-    brew upgrade --all
+    brew upgrade
     brew cleanup
 }
 
@@ -88,25 +69,12 @@ if [[ ! -d "$PROJECT_FOLDER" ]]; then
 fi
 }
 
-# Installs all listed packages for Linux
-function install_linux_packages() {
-    echo 'Linux\n'
-    for item in ${PACKAGES[@]}
-    do
-        sudo apt install $item
-    done
-}
-
 # Installs all listed packages for MacOS
 function install_macos_packages() {
-    echo "macOS\n"
+    echo "macos\n"
     for item in ${PACKAGES[@]}
     do
         brew install $item
-    done
-    for item in ${PACKAGES_BREW[@]}
-    do
-        brew cask install $item
     done
 }
 
@@ -138,9 +106,5 @@ function list_packages() {
 }
 
 list_packages
-if [[ "$1" == 'Linux' ]]; then
-    install_linux_packages
-else
-    brew_configs
-    install_macos_packages
-fi
+brew_configs
+install_macos_packages
