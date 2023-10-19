@@ -21,6 +21,7 @@ readonly PACKAGES=(
 #"gimp"
 "git"
 "htop"
+"insomnia"
 "lua"
 "maven"
 # "mongodb"
