@@ -14,4 +14,6 @@
     interactive = auto
     diff = auto
 [github]
-    user = Azurras
+    user = cbell504
+[core]
+	autocrlf = input
