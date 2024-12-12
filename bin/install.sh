@@ -21,6 +21,7 @@ FORMULAE=(
     "fastfetch"
     "findutils"
     "gcc"
+    "gimp"
     "git"
     "htop"
     "lua"
